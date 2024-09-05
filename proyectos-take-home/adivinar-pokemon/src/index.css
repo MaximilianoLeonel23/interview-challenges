@@ -5,8 +5,55 @@ main {
   min-height: 100vh;
   flex-direction: column;
   padding: 24px;
+  position: relative;
+}
+
+.score_dialog {
+  position: absolute;
+  right: -50%;
+  top: 1rem;
 }
 
 img {
   image-rendering: pixelated;
+}
+
+.main_title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.table_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.pokemon_image_container {
+  position: relative;
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.pokemon_image {
+  width: 100%;
+  height: auto;
+}
+
+.invisible_image {
+  filter: brightness(0);
+}
+
+.visible {
+  display: inherit;
+}
+
+.invisible {
+  display: none;
 }
