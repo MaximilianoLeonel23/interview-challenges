@@ -1,27 +1,71 @@
 * {
-  image-rendering: pixelated;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	image-rendering: pixelated;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  background-image: url('/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+	background-image: url('/background.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
 }
 
 main {
-  min-height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.tower_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tower {
+	margin-left: -5.5rem;
+}
+
+.step_container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.dolar_container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	animation: climbing 5s ease-in-out;
+}
+
+.dolar_value {
+	background-color: black;
+	color: white;
+}
+
+@keyframes climbing {
+	from {
+		top: 100vh;
+	}
+	to {
+		top: 0%;
+	}
 }
